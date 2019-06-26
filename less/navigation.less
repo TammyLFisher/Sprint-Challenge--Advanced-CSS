@@ -1,1 +1,57 @@
 // Navigation code here
+header {
+  .border-bottom();
+  .logo {
+    font-size: 25px;
+    color: @header-font-color;
+    padding-bottom: 2rem;
+    @media @phone {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 800px;
+    @media @phone {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 1rem;
+    }
+    nav {
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      @media @phone {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        margin: 0 auto;
+      }
+    }
+
+    a {
+      color: @nav-font;
+      text-decoration: none;
+      font-size: 1.6rem;
+      @media @phone {
+          font-size: 13px;
+      }
+    }
+    a:hover {
+      color: @waterloo;
+      text-decoration: underline;
+      cursor: pointer;
+      @media @phone {
+        color: blue;
+        background-color: @waterloo;
+      }
+    }
+  }
+}
