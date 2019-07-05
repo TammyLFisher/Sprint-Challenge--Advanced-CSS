@@ -167,15 +167,10 @@ p {
 header {
   border-bottom: 2px #dee2e6 solid;
 }
-header .logo {
-  font-size: 25px;
-  color: #23293B;
-  padding-bottom: 2rem;
-}
 @media (max-width: 500px) {
-  header .logo {
-    display: flex;
-    flex-direction: row;
+  header {
+    justify-content: center;
+    align-items: center;
   }
 }
 header div {
@@ -186,12 +181,10 @@ header div {
   width: 100%;
   max-width: 800px;
 }
-@media (max-width: 500px) {
-  header div {
-    display: flex;
-    flex-direction: column;
-    padding-bottom: 1rem;
-  }
+header div .logo {
+  font-size: 25px;
+  color: #23293B;
+  padding-bottom: 2rem;
 }
 header div nav {
   width: 50%;
@@ -201,10 +194,8 @@ header div nav {
 }
 @media (max-width: 500px) {
   header div nav {
-    display: flex;
-    flex-direction: row;
     width: 100%;
-    margin: 0 auto;
+    flex-wrap: wrap;
   }
 }
 header div a {
@@ -212,20 +203,16 @@ header div a {
   text-decoration: none;
   font-size: 1.6rem;
 }
-@media (max-width: 500px) {
-  header div a {
-    font-size: 13px;
-  }
-}
 header div a:hover {
-  color: #81848E;
+  color: #dee2e6;
+  background: #81848E;
   text-decoration: underline;
   cursor: pointer;
 }
 @media (max-width: 500px) {
   header div a:hover {
-    color: blue;
-    background-color: #81848E;
+    color: #F6F7F8;
+    background-color: #23293B;
   }
 }
 footer {
@@ -325,7 +312,21 @@ footer {
 .home .walk .walk-text p {
   margin-bottom: 26px;
 }
-.home .walk button {
+.home .walk-img {
+  width: 46%;
+  margin-left: 4%;
+}
+@media (max-width: 500px) {
+  .home .walk-img {
+    width: 100%;
+  }
+}
+.home .walk-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+.home button {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -344,16 +345,16 @@ footer {
   position: relative;
 }
 @media (max-width: 500px) {
-  .home .walk button {
+  .home button {
     width: 100%;
   }
 }
-.home .walk button:hover {
+.home button:hover {
   background: white;
   color: #22283A;
   cursor: pointer;
 }
-.home .walk button:after {
+.home button:after {
   content: "";
   background: #90ee90;
   position: absolute;
@@ -364,25 +365,11 @@ footer {
   opacity: 0;
   transition: all 0.8s;
 }
-.home .walk button:active:after {
+.home button:active:after {
   padding: 0;
   margin: 0;
   opacity: 1;
   transition: 0s;
-}
-.home .walk .walk-img {
-  width: 46%;
-  margin-left: 4%;
-}
-@media (max-width: 500px) {
-  .home .walk .walk-img {
-    width: 100%;
-  }
-}
-.home .walk .walk-img img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
 }
 header {
   max-width: 100%;
@@ -394,4 +381,10 @@ header {
   padding: 0 7.5rem;
   margin-bottom: 10rem;
   margin: 0 auto;
+  background: #dee2e6;
+}
+@media (max-width: 500px) {
+  header {
+    padding: 0px 2.5rem;
+  }
 }
